@@ -75,7 +75,7 @@ def merge_2_singly_linked_lists(head1, head2):
 
     # Loop through the 2 lists.  On each iteration, we add a new node to the
     # output ('merged'), and remove a node from one of the 2 lists; we iterate
-    # until both lists are empty."""
+    # until both lists are empty.
     tail = merged
     while head1 != None or head2 != None:
         if head1 and head2:

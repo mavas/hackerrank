@@ -4,6 +4,22 @@ https://www.hackerrank.com/challenges/icecream-parlor/problem
 
 
 def icecreamParlor(m, arr):
+    decorated_arr = []
+    for index, item in enumerate(arr):
+        decorated_arr.append((item, index))
+
+    import itertools
+    for item in itertools.permutations(decorated_arr, 2):
+        pass
+    for item in itertools.combinations(decorated_arr, 2):
+        pass
+    for i in decorated_arr:
+        for j in decorated_arr:
+            if (i[0] + j[1]) == m and i[1] != j[1]:
+                return [i[1] + 1, j[1] + 1]
+
+
+def icecreamParlor(m, arr):
     """
     This involves using a sorted array, and binary search.  This method works,
     but I still have yet to truely understand how it works; more thinking about

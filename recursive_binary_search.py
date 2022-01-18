@@ -7,7 +7,8 @@ January 8, 2022
 
 
 def binary_search_iterative(sequence, value):
-    """Will continue later."""
+    """Will continue to work on later (so, this function currently doesn't
+    work."""
     low = 0
     high = len(sequence) - 1
 

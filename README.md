@@ -8,6 +8,10 @@ structures solutions for computer science problems.
 
 Everything is in Python 3.8+, and each file has test cases at the very bottom.
 
+# Solutions
+
+- Insert a node into a sorted, doubly-linked list.
+
 # More information
 
 After recently traveling back to the HackerRank web site, I noticed that while

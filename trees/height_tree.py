@@ -13,6 +13,18 @@ class BinarySearchTree:
     def __init__(self): 
         self.root = None
 
+    @staticmethod
+    def initialize(arr):
+        """Does this work by insertion sort?  Is this a standardized algorithm
+        for inserting/creating data in a binary search tree?
+
+        TODO: Determine the algorithm for this method
+        """
+        tree = BinarySearchTree()
+        n = len(arr)
+        [tree.create(arr[i]) for i in range(n)]
+        return tree
+
     def create(self, val):  
         if self.root == None:
             self.root = Node(val)
@@ -95,8 +107,10 @@ def height(root):
     height_left = height(root.left)
     height_right = height(root.right)
  
+    # ..
     return max(height_left, height_right) + 1
 
+    # ..
     if height_left == -1 and height_right == -1:
         return height_left + 1
     elif height_left >= height_right:
@@ -121,6 +135,15 @@ def height2(node):
             return rheight+1
 
 
+def lca(root):
+    pass
+
+
+def lca_main(root, v1, v2):
+    """I'm thinking of a method inloving recursion."""
+    pass
+
+
 if __name__ == '__main__':
     def _create_test_example_tree_1():
         arr = [3, 5, 2, 1, 4, 6, 7]
@@ -133,3 +156,15 @@ if __name__ == '__main__':
 
     assert height(tree.root) == 3
     assert treeHeight(tree.root) == 4
+
+    def _create_test_example_tree_2():
+        arr = [4, 2, 3, 1, 7, 6]
+        tree = BinarySearchTree()
+        n = len(arr)
+        [tree.create(arr[i]) for i in range(n)]
+        return tree
+    def _create_test_example_tree_3():
+        arr = [4, 2, 3, 1, 7, 6]
+        return BinarySearchTree.initialize(arr)
+    tree = _create_test_example_tree_2()
+    assert lca_main(tree, 1, 7) == 6

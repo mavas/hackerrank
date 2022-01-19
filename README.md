@@ -11,6 +11,7 @@ Everything is in Python 3.8+, and each file has test cases at the very bottom.
 # Solutions
 
 - Insert a node into a sorted, doubly-linked list.
+- Valid palindrome.
 
 # More information
 

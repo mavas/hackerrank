@@ -1,16 +1,20 @@
 # hackerrank
 
-Recent Python 3.8 solutions for www.HackerRank.com problems.
+Recent Python 3.8 solutions for www.HackerRank.com and www.LeetCode.com problems.
 
-The purpose of this repository is just for employment purposes only, so as to
-showcase my recent work.  This repository only features algorithm and data
-structures solutions for computer science problems.
+The purpose of this repository is only as a portfolio for employment purposes
+only, so as to showcase recent work.  This repository only features algorithm
+and data structures solutions for computer science problems.
 
 Everything is in Python 3.8+, and each file has test cases at the very bottom.
 
 # Solutions
 
+- path_sum.py
+- Understand use of binary search in ice_cream_parler.py
 - Insert a node into a sorted, doubly-linked list.
+
+- Lowest Common Ancestor, (height_tree.py)
 - Valid palindrome.
 
 # More information

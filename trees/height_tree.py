@@ -3,54 +3,7 @@ https://www.hackerrank.com/challenges/ctci-is-binary-search-tree/problem
 """
 
 
-class Node:
-    """A node (of a binary search tree) has a left and right node reference,
-    along with some data."""
-    def __init__(self, info): 
-        self.info = info  
-        self.left = None  
-        self.right = None 
-
-    def __str__(self):
-        return str(self.info) 
-
-class BinarySearchTree:
-    def __init__(self): 
-        self.root = None
-
-    @staticmethod
-    def initialize(arr):
-        """Does this work by insertion sort?  Is this a standardized algorithm
-        for inserting/creating data in a binary search tree?
-
-        TODO: Determine the algorithm for this method
-        """
-        tree = BinarySearchTree()
-        n = len(arr)
-        [tree.create(arr[i]) for i in range(n)]
-        return tree
-
-    def create(self, val):  
-        if self.root == None:
-            self.root = Node(val)
-        else:
-            current = self.root
-
-            while True:
-                if val < current.info:
-                    if current.left:
-                        current = current.left
-                    else:
-                        current.left = Node(val)
-                        break
-                elif val > current.info:
-                    if current.right:
-                        current = current.right
-                    else:
-                        current.right = Node(val)
-                        break
-                else:
-                    break
+from common import Node, BinarySearchTree
 
 
 def height_custom(root):
@@ -140,69 +93,6 @@ def height2(node):
             return rheight+1
 
 
-def check_bst(root):
-    if root is None:
-        return None
-
-    if root.left is None and root.right is None:
-        return True
-
-    left_node = check_bst(root.left)
-    right_node = check_bst(root.right)
-    print(left_node, left_node, root.info)
-
-    if left_node and right_node:
-        if isinstance(left_node, Node) and left_node.info < root.info:
-            if isinstance(right_node, Node) and right_node.info > root.info:
-                return True
-        if left_node.info < root.info and right_node.info > root.info:
-            return True
-        else:
-            return False
-    elif left_node and not right_node:
-        if left_node.info < root.info:
-            return True
-        return False
-    elif not left_node and right_node:
-        if isinstance(right_node, Node) and right_node.info > root.info:
-            return True
-        return right_node
-    elif not left_node and not right_node:
-        return True
-
-
-def lca(root, v1):
-    """Is there anything that can be done about calling a driver function
-    exactly 2 times, once per v1 and v2 (as opposed to an invokation that
-    involves both)?"""
-
-def lca_main(root, v1, v2):
-    """
-    I'm thinking of a method inloving recursion.
-
-    Both v1 and v2 WILL indeed exist, so it's a matter of seeing if they are on
-    the left or right.  If it's THIS node, somehow report that correctly maybe.
-
-    Very proud of this one!  Thought it up completely and it passed all tests.
-    January 18, 2022
-    """
-    if root is None:
-        return None
-
-    if root.info == v1 or root.info == v2:
-        return root
-
-    v1_location = lca_main(root.left, v1, v2)
-    v2_location = lca_main(root.right, v1, v2)
-
-    if v1_location and v2_location:
-        return root.info
-    elif v1_location and not v2_location:
-        return v1_location
-    elif not v1_location and v2_location:
-        return v2_location
-
-
 if __name__ == '__main__':
     def _create_test_example_tree_1():
         arr = [3, 5, 2, 1, 4, 6, 7]
@@ -215,22 +105,3 @@ if __name__ == '__main__':
 
     assert height(tree.root) == 3
     assert treeHeight(tree.root) == 4
-
-    def _create_test_example_tree_2():
-        arr = [4, 2, 3, 1, 7, 6]
-        tree = BinarySearchTree()
-        n = len(arr)
-        [tree.create(arr[i]) for i in range(n)]
-        return tree
-    def _create_test_example_tree_3():
-        arr = [4, 2, 3, 1, 7, 6]
-        return BinarySearchTree.initialize(arr)
-    tree = _create_test_example_tree_2()
-    #assert lca_main(tree.root, 1, 7) == 6
-    assert lca_main(tree.root, 1, 7) == 4
-
-    def _create_test_example_tree_4():
-        arr = [1, 2, 4, 3, 5, 6, 7]
-        return BinarySearchTree.initialize(arr)
-    tree = _create_test_example_tree_4()
-    print(check_bst(tree.root))

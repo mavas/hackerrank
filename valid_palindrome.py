@@ -1,3 +1,8 @@
+"""
+https://leetcode.com/problems/valid-palindrome
+"""
+
+
 def using_isalnum(s):
     s = ''.join(filter(str.isalnum, s))
     return s
@@ -18,7 +23,7 @@ def valid_palindrome(s):
 
     middle_index = len(s) // 2
     first_half = s[:middle_index]
-    if (middle_index % 2) == 0:
+    if (len(s) % 2) == 0:
         second_half = s[middle_index:]
     else:
         second_half = s[middle_index+1:]
@@ -37,3 +42,4 @@ def valid_palindrome(s):
 assert valid_palindrome("A man, a plan, a canal: Panama") == True
 assert valid_palindrome("race a car") == False
 assert valid_palindrome(" ") == True
+assert valid_palindrome("ab") == False

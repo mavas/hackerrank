@@ -3,6 +3,12 @@ This solution really taught me to break out that inner while loop into its own
 function call, because I was getting bugs involving Python's behavior of nested
 while loops, and trying to break out with "break" and "continue"  I got it
 working, but things were more CLEAR when you break it out into a function.
+
+Just submitted this but it wouldn't work on a crazy big input.  Looking back,
+you really are just moving down the line naively.
+
+Now I'm thinking to use binary_search or anything algorithm to first find the
+first character.  That's a good bet.  January 18, 2022
 """
 
 

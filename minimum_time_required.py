@@ -8,7 +8,16 @@ January 19, 2022
 """
 
 
+def minimum_time_required_2(machines, goal):
+    """Produce an array of integers.  Somehow, we know there's some
+    relationship between which day number it is (day #1, day #2, etc.), and the
+    machine; it probably has to do with the modulo of the day number and the
+    machine work output number."""
+
+
 def minimum_time_required(machines, goal):
+    """This solution is too slow, but makes sense and works for small
+    inputs."""
     day_number = 0
     amount_produced_so_far = 0
 
@@ -30,3 +39,4 @@ def minimum_time_required(machines, goal):
 
 
 assert minimum_time_required([2, 3], 5) == 6
+assert minimum_time_required([4, 5, 6], 12) == 20

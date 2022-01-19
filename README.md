@@ -8,6 +8,7 @@ and data structures solutions for computer science problems.
 
 Everything is in Python 3.8+, and each file has test cases at the very bottom.
 
+<!---
 # Solutions
 
 - path_sum.py
@@ -37,6 +38,7 @@ Still need to work on:
     - ice_cream_parlor.py
     - get_max.py
     - minimum_absolute_difference could be more optimal
+--->
 
 <!---
 ## Change repository commit history

@@ -7,7 +7,7 @@ from common import Node, BinarySearchTree
 
 
 def height_custom(root):
-    """David Kilgore-implented solution."""
+    """mavas-implented solution."""
     def _height_recursive(node, count):
         if node.left:
             _height_recursive(node.left, count+1)

@@ -1,9 +1,14 @@
-# January 18, 2022
-#Passed today.  I had to modify the code to account for the [9] case, which was
-#fun.
+"""
+https://leetcode.com/problems/plus-one/
+
+January 18, 2022
+Passed today.  I had to modify the code to account for the [9] case, which was
+fun.
+"""
 
 
 def plus_one(digits):
+    """Returns the result of incrementing the given "number" by 1."""
     N = len(digits)
     i = N - 1
 

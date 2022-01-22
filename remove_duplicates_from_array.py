@@ -1,7 +1,6 @@
 """
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-
 For some reason this code works, but on the web UI it's not submitting
 properly, and the algorithm looks like it works, so I really think the problem
 is just LeetCode's interface, and not this code, but we'll see.
@@ -35,7 +34,8 @@ def remove_duplicates_from_array(nums):
     return nums
 
 
-#assert remove_duplicates_from_array([0,0,1,1,1,2,2,3,3,4]) == 5
-assert remove_duplicates_from_array([0,0,1,1,1,2,2,3,3,4,4]) == [0,1,2,3,4]
-assert remove_duplicates_from_array([0,0,1,1,1,2,2,3,3,4]) == [0,1,2,3,4]
-assert remove_duplicates_from_array([1,1,2]) == [1, 2]
+if __name__ == '__main__':
+    #assert remove_duplicates_from_array([0,0,1,1,1,2,2,3,3,4]) == 5
+    assert remove_duplicates_from_array([0,0,1,1,1,2,2,3,3,4,4]) == [0,1,2,3,4]
+    assert remove_duplicates_from_array([0,0,1,1,1,2,2,3,3,4]) == [0,1,2,3,4]
+    assert remove_duplicates_from_array([1,1,2]) == [1, 2]

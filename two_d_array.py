@@ -1,5 +1,11 @@
+"""
+https://www.hackerrank.com/challenges/2d-array/problem
+
+I guess I couldn't figure this one out just yet; still not done.
+"""
+
+
 def array():
-    """https://www.hackerrank.com/challenges/2d-array/problem"""
     arr = [[1, 1, 1, 0, 0, 0],
         [0, 1, 0, 0, 0, 0],
         [1, 1, 1, 0, 0, 0],

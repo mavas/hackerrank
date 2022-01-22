@@ -1,4 +1,6 @@
 """
+https://www.hackerrank.com/challenges/minimum-time-required/problem
+
 This is my most difficult problem so far, but I whipped up this solution first,
 and it passed some test cases on HackerRank.  I submitted it, and did indeed
 think it wouldn't scale, and surely it failed on some test cases, with one
@@ -38,5 +40,6 @@ def minimum_time_required(machines, goal):
     return day_number
 
 
-assert minimum_time_required([2, 3], 5) == 6
-assert minimum_time_required([4, 5, 6], 12) == 20
+if __name__ == '__main__':
+    assert minimum_time_required([2, 3], 5) == 6
+    assert minimum_time_required([4, 5, 6], 12) == 20

@@ -1,7 +1,6 @@
 """
 https://leetcode.com/problems/remove-element/
 
-
 This solution won't submit for some reason, just like that other challenge, but
 I'm still sure it's LeetCode's mechanisms, rather than this solution not
 working.
@@ -25,7 +24,8 @@ def remove_element(nums, val):
     return nums
 
 
-assert remove_element([3, 2, 2, 3], 3) == [2, 2]
-assert remove_element([3, 2, 2, 3], 2) == [3, 3]
-assert remove_element([1], 1) == []
-#assert remove_element([3, 2, 2, 3], 3) == 2
+if __name__ == '__main__':
+    assert remove_element([3, 2, 2, 3], 3) == [2, 2]
+    assert remove_element([3, 2, 2, 3], 2) == [3, 3]
+    assert remove_element([1], 1) == []
+    #assert remove_element([3, 2, 2, 3], 3) == 2

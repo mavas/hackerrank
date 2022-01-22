@@ -30,5 +30,6 @@ def longest_common_prefix(strs):
     return o
 
 
-assert longest_common_prefix(['flower', 'flow', 'flight']) == 'fl'
-assert longest_common_prefix(["dog","racecar","car"]) == ""
+if __name__ == '__main__':
+    assert longest_common_prefix(['flower', 'flow', 'flight']) == 'fl'
+    assert longest_common_prefix(["dog","racecar","car"]) == ""

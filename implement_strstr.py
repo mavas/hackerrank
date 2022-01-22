@@ -1,4 +1,6 @@
 """
+https://leetcode.com/problems/implement-strstr/
+
 This solution really taught me to break out that inner while loop into its own
 function call, because I was getting bugs involving Python's behavior of nested
 while loops, and trying to break out with "break" and "continue"  I got it
@@ -39,6 +41,7 @@ def strstr(haystack, needle):
     return -1
 
 
-assert strstr("hello", "ll") == 2
-assert strstr("", "") == 0
-assert strstr("a", "a") == 0
+if __name__ == '__main__':
+    assert strstr("hello", "ll") == 2
+    assert strstr("", "") == 0
+    assert strstr("a", "a") == 0

@@ -1,3 +1,13 @@
+"""
+I think this one may be:
+https://www.hackerrank.com/challenges/minimum-swaps-2/problem
+
+I'm not sure how I completed this online, because I passed it, but the solution
+was mostly here locally in this repository, but these test cases don't work.
+Maybe I'll work on it later.
+"""
+
+
 def all_done(arr):
     for item in arr:
         if not isinstance(item, int):
@@ -94,4 +104,3 @@ def minimumSwaps(arr):
 
 if __name__ == '__main__':
     assert minimumSwaps([7, 1, 3, 2, 4, 5, 6]) == 5
-    print(minimumSwaps([7, 1, 3, 2, 4, 5, 6]))

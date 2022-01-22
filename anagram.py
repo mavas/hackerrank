@@ -1,3 +1,8 @@
+"""
+https://www.hackerrank.com/challenges/anagram/problem
+"""
+
+
 def _method_1(a, b):
     """Thought of this, on the fly, January 15, 2022."""
     import string
@@ -40,4 +45,5 @@ def makeAnagram(a, b):
  
 
 if __name__ == '__main__':
+    # Remove the 'c', 'd', 'a', and 2nd 'c'.  That's 4 characters removed.
     assert makeAnagram('cde', 'abc') == 4

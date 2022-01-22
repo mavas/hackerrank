@@ -39,7 +39,8 @@ def valid_palindrome(s):
     return True
 
 
-assert valid_palindrome("A man, a plan, a canal: Panama") == True
-assert valid_palindrome("race a car") == False
-assert valid_palindrome(" ") == True
-assert valid_palindrome("ab") == False
+if __name__ == '__main__':
+    assert valid_palindrome("A man, a plan, a canal: Panama") == True
+    assert valid_palindrome("race a car") == False
+    assert valid_palindrome(" ") == True
+    assert valid_palindrome("ab") == False

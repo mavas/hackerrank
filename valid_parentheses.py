@@ -25,6 +25,7 @@ def is_valid(s):
     return len(stack) == 0
 
 
-assert is_valid('()') == True
-assert is_valid('()[]{}') == True
-assert is_valid('(]') == False
+if __name__ == '__main__':
+    assert is_valid('()') == True
+    assert is_valid('()[]{}') == True
+    assert is_valid('(]') == False

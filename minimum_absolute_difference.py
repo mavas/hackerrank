@@ -1,8 +1,12 @@
-"""Solved this today by increasing this variable from 100,000 to 1,000,000,
+"""
+https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array
+
+Solved this today by increasing this variable from 100,000 to 1,000,000,
 after opening up a test case using a HackerRank hacko, explained here:
 https://help.hackerrank.com/hc/en-us/articles/115013862347-Hackos-and-rewards-purchases
 .  The new test case gave good insite about simply understanding problem size,
-could solve the problem."""
+could solve the problem.
+"""
 
 
 LOWEST_SO_FAR = 1000000
@@ -51,6 +55,5 @@ if __name__ == '__main__':
     d = d.split(" ")
     d = [int(x) for x in d]
     assert len(d) == 100
-    print(minimumAbsoluteDifference(d))
-    #assert sorted_minimumAbsoluteDifference(d) == 501918
-    print(sorted_minimumAbsoluteDifference(d))
+    assert minimumAbsoluteDifference(d) == 501918
+    assert sorted_minimumAbsoluteDifference(d) == 501918

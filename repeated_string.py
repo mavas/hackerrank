@@ -1,14 +1,17 @@
+"""
+https://www.hackerrank.com/challenges/repeated-string/problem
+"""
+
+
 def repeatedString(s, n):
     """Either 1,000,000,000,000
 
     The length of S could be less than N.
     The length of S could be greater than N
     The length of S could be equal to N
-    https://www.hackerrank.com/challenges/repeated-string/problem
     """
     # The number of times the letter 'a' occurs in the string S.
     num_a = s.count('a')
-    print("num_a: " + str(num_a))
 
     # If the length of S is less than N, there must be some number of times
     # that S wholy divides into N, and there may or may not be a remainder when
@@ -29,6 +32,9 @@ def repeatedString(s, n):
 
     return
 
+
+def old_solution(s, n):
+    """Didn't work on large inputs."""
     # The old, string-building method.  Didn't work on big inputs.
     new_s = ''
     number_of_times = 0
@@ -53,5 +59,8 @@ def repeatedString(s, n):
     return total_number_of_a
 
 
-    print(repeatedString("abcac", 10))
-    print(repeatedString("udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps", 872514961806))
+if __name__ == '__main__':
+    assert repeatedString("abcac", 10) == 4
+    assert repeatedString("aba", 10) == 7
+    assert repeatedString("a", 1000000000000) == 1000000000000
+    assert repeatedString("udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps", 872514961806) == 69801196944

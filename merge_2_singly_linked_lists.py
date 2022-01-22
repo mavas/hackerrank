@@ -1,3 +1,8 @@
+"""
+https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem
+"""
+
+
 class SinglyLinkedList:
     """A singly-linked list."""
     def __init__(self, data):
@@ -113,5 +118,7 @@ def main(head1, head2):
     rval = get_data_list_of_singly_linked_list(sll)
     return rval
 
-assert main([1, 2, 3], [2]) == [1, 2, 2, 3]
-assert main([1, 3, 22], [2]) == [1, 2, 3, 22]
+
+if __name__ == '__main__':
+    assert main([1, 2, 3], [2]) == [1, 2, 2, 3]
+    assert main([1, 3, 22], [2]) == [1, 2, 3, 22]

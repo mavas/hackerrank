@@ -1,3 +1,10 @@
+"""
+https://www.hackerrank.com/challenges/ctci-is-binary-search-tree/problem
+
+Not completed yet.
+"""
+
+
 from common import Node, BinarySearchTree
 
 
@@ -33,8 +40,9 @@ def check_bst(root):
         return True
 
 
-def _create_test_example_tree_4():
-    arr = [1, 2, 4, 3, 5, 6, 7]
-    return BinarySearchTree.initialize(arr)
-tree = _create_test_example_tree_4()
-print(check_bst(tree.root))
+if __name__ == '__main__':
+    def _create_test_example_tree_4():
+        arr = [1, 2, 4, 3, 5, 6, 7]
+        return BinarySearchTree.initialize(arr)
+    tree = _create_test_example_tree_4()
+    print(check_bst(tree.root))

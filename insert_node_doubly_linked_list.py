@@ -2,6 +2,8 @@
 https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem
 
 Started working on this January 18, 2022
+
+I don't think this works yet.
 """
 
 
@@ -41,7 +43,7 @@ def get_data_list_of_doubly_linked_list(sll):
 
 def print_items_of_doubly_linked_list(node):
     """Prints, in order, the items of a DoublyLinkedList object."""
-    if node.prev = None:
+    if node.prev == None:
         pass
     while node:
         if node.next:
@@ -77,5 +79,6 @@ def main(head, data):
     return rval
 
 
-assert main([1, 2, 3], 2) == [1, 2, 2, 3]
-assert main([1, 3, 4, 10], 5) == [1, 3, 4, 5, 10]
+if __name__ == '__main__':
+    assert main([1, 2, 3], 2) == [1, 2, 2, 3]
+    assert main([1, 3, 4, 10], 5) == [1, 3, 4, 5, 10]

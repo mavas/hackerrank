@@ -1,4 +1,13 @@
-lass Node:
+"""
+https://www.hackerrank.com/challenges/tree-inorder-traversal/problem
+"""
+
+
+from common import Node, BinarySearchTree
+
+
+"""
+class Node:
     def __init__(self, info): 
         self.info = info  
         self.left = None  
@@ -33,12 +42,16 @@ class BinarySearchTree:
                         break
                 else:
                     break
+"""
+
 
 """
 Node is defined as
 self.left (the left child of the node)
 self.right (the right child of the node)
 self.info (the value of the node)
+
+This solution 100% works on HackerRank
 """
 def inOrder(root):
     if root.left:
@@ -47,14 +60,30 @@ def inOrder(root):
     if root.right:
         inOrder(root.right)
 
+def inOrder2(root):
+    """This returns a list, instead of just printing.  Not working yet."""
+    o = []
+    left_side = None
+    right_side = None
+
+    if root.left:
+        left_side = inOrder(root.left)
+    middle = root.info
+    if root.right:
+        right_side = inOrder(root.right)
+
+    if left_side:
+        o.append(left_side)
+    o.append(middle)
+    if right_side:
+        o.append(right_side)
+
+    return o
 
 
-tree = BinarySearchTree()
-t = int(input())
-
-arr = list(map(int, input().split()))
-
-for i in range(t):
-    tree.create(arr[i])
-
-inOrder(tree.root)
+if __name__ == '__main__':
+    def _create_test_example_tree(arr):
+        return BinarySearchTree.initialize(arr)
+    tree = _create_test_example_tree([1, 2, 5, 3, 6, 4])
+    #assert inOrder2(tree.root) == [1, 2, 3, 4, 5, 6]
+    print(inOrder2(tree.root))

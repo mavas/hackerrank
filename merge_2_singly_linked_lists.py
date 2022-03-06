@@ -3,26 +3,7 @@ https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem
 """
 
 
-class SinglyLinkedList:
-    """A singly-linked list."""
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-    @staticmethod
-    def create_singly_linked_list_from_list(items):
-        """Makes a SinglyLinkedList object from a Python list."""
-        item = items[0]
-        first_node = SinglyLinkedList(item)
-        items = items[1:]
-
-        head = first_node
-        for item in items:
-            next_node = SinglyLinkedList(item)
-            first_node.next = next_node
-            first_node = first_node.next
-
-        return head
+from common import SinglyLinkedList
 
 
 def get_data_list_of_singly_linked_list(sll):

@@ -1,5 +1,5 @@
-class Node:
-    """A node (of a binary search tree) has a left and right node reference,
+class BinarySearchTreeNode:
+    """A node of a binary search tree has a left and right node reference,
     along with some data."""
     def __init__(self, info): 
         self.info = info  
@@ -28,7 +28,7 @@ class BinarySearchTree:
 
     def create(self, val):  
         if self.root == None:
-            self.root = Node(val)
+            self.root = BinarySearchTreeNode(val)
         else:
             current = self.root
 
@@ -37,13 +37,13 @@ class BinarySearchTree:
                     if current.left:
                         current = current.left
                     else:
-                        current.left = Node(val)
+                        current.left = BinarySearchTreeNode(val)
                         break
                 elif val > current.info:
                     if current.right:
                         current = current.right
                     else:
-                        current.right = Node(val)
+                        current.right = BinarySearchTreeNode(val)
                         break
                 else:
                     break

@@ -16,7 +16,7 @@ def all_done(arr):
 
 
 # Iteratively, using outer and inner indices.
-def _method_2(data_arr):
+def _solve_method_2(data_arr):
     # It wasn't worth the attention to detail.
     while not all_done(data_arr):
         i = 0
@@ -44,6 +44,18 @@ def _compute_2_swap_positions_1(data_arr):
                     second_highest_distance_so_far = (index, distance)
     print(highest_distance_so_far, second_highest_distance_so_far)
     return (highest_distance_so_far, second_highest_distance_so_far)
+
+
+def _augment_array(arr):
+    new_arr = []
+    for index, item in enumerate(arr):
+        intended_index = item - 1
+        if index != intended_index:
+            difference = abs(intended_index - index)
+            new_arr.append((item, difference))
+        else:
+            new_arr.append(item)
+    return new_arr
 
 def _compute_2_swap_positions_2(data_arr):
     """Selects to disjoint positions randomly."""
@@ -77,20 +89,11 @@ def _update_entries(data_arr, first_one, second_one):
 
     return data_arr
 
-def _augment_array(arr):
-    data_arr = []
-    for index, item in enumerate(arr):
-        intended_index = item - 1
-        if index != intended_index:
-            difference = abs(intended_index - index)
-            data_arr.append((item, difference))
-        else:
-            data_arr.append(item)
-    return data_arr
+def _solve_method_1(arr):
+    """This method involves using Python's random module, which is not good.
+    If you run this Python file, using this method, the test cases listed below
+    usually fail, but occasionally all of them will pass."""
 
-
-def minimumSwaps(arr):
-    """Return the minimum number of swaps to sort the array."""
     data_arr = _augment_array(arr)
 
     count = 0
@@ -100,6 +103,11 @@ def minimumSwaps(arr):
         count += 1
 
     return count
+
+
+def minimumSwaps(arr):
+    """Return the minimum number of swaps to sort the array."""
+    return _solve_method_1(arr)
 
 
 if __name__ == '__main__':

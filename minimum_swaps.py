@@ -58,7 +58,7 @@ def _augment_array(arr):
     return new_arr
 
 def _compute_2_swap_positions_2(data_arr):
-    """Selects to disjoint positions randomly."""
+    """Selects two disjoint positions randomly."""
     import random
     while True:
         first_one = random.randrange(len(data_arr))

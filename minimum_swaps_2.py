@@ -186,9 +186,9 @@ def _solve_method_3(arr):
         arr[second_index] = temp
         return arr
 
-    n = len(arr)
+    N = len(arr)
     swaps = 0
-    for i in range(0, n - 1):
+    for i in range(0, N - 1):
         while arr[i] != i + 1:
             first_index = arr[i] - 1
             second_index = i

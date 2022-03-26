@@ -10,6 +10,9 @@ I also found this, describing my initial approach as naive:
 https://www.techrbun.com/array-manipulation-hackerrank-solution/
 
 https://sites.northwestern.edu/acids/2018/11/12/solution-hackerrank-array-manipulation/
+
+I also found this video, with a much more visual description, and also shows
+why they do B+1 instead of just B. https://www.youtube.com/watch?v=JtJKn_c9lB4
 """
 
 

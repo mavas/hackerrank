@@ -43,7 +43,7 @@ def equal_stacks(a, b, c):
                 a = a[1:]
 
     return sum(a)
- 
+
 
 if __name__ == '__main__':
     assert equal_stacks([1, 2, 1, 1], [1, 1, 2], [1, 1]) == 2

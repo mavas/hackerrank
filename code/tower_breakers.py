@@ -3,4 +3,4 @@ def tower_breakers(n, m):
 
 
 if __name__ == '__main__':
-    tower_breakers(2, 6)
+    assert tower_breakers(2, 6) == 2

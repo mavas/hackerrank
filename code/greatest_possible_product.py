@@ -15,8 +15,9 @@ implementation.
 
 
 def greatest_possible_product(a):
-    return 54
+    a.sort()
+    return a[-1] * a[-2]
  
 
 if __name__ == '__main__':
-    assert greatest_possible_product([2, 540, 21, 24, 9]) == 4
+    assert greatest_possible_product([2, 540, 21, 24, 9]) == 12960

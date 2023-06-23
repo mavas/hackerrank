@@ -1,7 +1,5 @@
 /**
- * https://codeforces.com/gym/102133/problem/J
- *
- * 10^4 = 10,000
+ * https://codeforces.com/gym/101736/problem/G
  */
 
 

@@ -1,5 +1,14 @@
 """
 https://codeforces.com/gym/104207/problem/E
+
+
+cat test_case_1.txt
+
+2
+6
+13 11 11 11 13 11
+6
+13 11 11 11 13 11
 """
 
 

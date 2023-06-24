@@ -13,9 +13,10 @@ int main(int argc, char* argv[])
     printf("%d\n", N);
 
     int compartments[N];
+
     for (int count=0; count < N; count+=1)
     {
-        
+
     }
 
     return 0;

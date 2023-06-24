@@ -18,10 +18,19 @@ https://codeforces.com/gym/102441/problem/B
 import fileinput
 
 
+def compute(s, n, a):
+    print(s, n)
+    print(a)
+
+
 def main():
     with fileinput.input() as fh:
-        N = fh.readline().strip()
-        print(N)
+        N = int(fh.readline().strip())
+
+        for line in range(N):
+            test_case = fh.readline().strip()
+            s, n, a = test_case.split(' ', 2)
+            compute(s, n, a)
 
 
 if __name__ == '__main__':

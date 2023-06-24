@@ -16,7 +16,9 @@ import fileinput
 
 
 def compute(s, n, a):
-    #if len(s) > (
+    for number in a:
+        if len(s) > len(a):
+            return "-1"
     print(type(a))
     print(a)
 
@@ -35,7 +37,12 @@ def main():
 
 if __name__ == '__main__':
     #main()
-    s = "1234"
+    s = "12534"
     n = "2"
-    a = "21 43"
-    assert compute(s, n, a) == "14 23"
+    a = [21, 43]
+    assert compute(s, n, a) == "-1"
+
+    #s = "1234"
+    #n = "2"
+    #a = "21 43"
+    #assert compute(s, n, a) == "14 23"

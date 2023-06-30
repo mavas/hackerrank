@@ -35,7 +35,8 @@ def compute_the_answer(x, y, a, m):
     f_y = fib(y)
     u = a**f_x - 1
     v = a**f_y - 1
-    return (math.lcm(u, v) / math.gcd(u, v)) % m
+    result = (math.lcm(u, v) / math.gcd(u, v)) % m
+    return result
 
 
 def main_stdin():
@@ -62,7 +63,6 @@ def main_stdin():
 if __name__ == '__main__':
     #main_stdin()
 
-    case_1 = [3, 3, 3, 97]
     assert compute_the_answer(3, 3, 3, 97) == 1
     assert compute_the_answer(7, 3, 2, 1901) == 1761
     assert compute_the_answer(6, 12, 3, 100) == 98

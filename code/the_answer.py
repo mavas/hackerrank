@@ -25,12 +25,12 @@ def fib(n):
     if n == 1:
         return 1
     elif n == 2:
-        return 2:
+        return 2
     else:
         return fib(n-1) + fib(n-2)
 
 
-def compute_minimum(test_case_number, test_case):
+def compute_the_answer(x, y, a, m):
     u = a**(fib(x) - 1)
     return result
 
@@ -57,7 +57,7 @@ def main_stdin():
 
 
 if __name__ == '__main__':
-    main_stdin()
+    #main_stdin()
 
-    #case_1 = [13, 11, 11, 11, 13, 11]
-    #assert compute_minimum(1, case_1) == "Case #1: 82"
+    case_1 = [3, 3, 3, 97]
+    assert compute_the_answer(3, 3, 3, 97) == 1

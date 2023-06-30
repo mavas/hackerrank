@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     scanf("%d\n", &N);
     printf("%d\n", N);
 
-    int compartments[N];
+    int test_cases[N];
 
     for (int count=0; count < N; count+=1)
     {

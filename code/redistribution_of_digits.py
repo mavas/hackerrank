@@ -16,9 +16,18 @@ import fileinput
 
 
 def compute(s, n, a):
+    s_changed = []
+    [s_changed.append(int(i)) for i in s]
+    s = sorted(s_changed)
+    s.reverse()
+    print(s, a)
+
+    # First see if it's possible, only given the number of digits in 's',
+    # compared with the length of any of the upper bounds numbers.
     for number in a:
         if len(s) > len(a):
             return "-1"
+
     print(type(a))
     print(a)
 
@@ -42,7 +51,7 @@ if __name__ == '__main__':
     a = [21, 43]
     assert compute(s, n, a) == "-1"
 
-    #s = "1234"
-    #n = "2"
-    #a = "21 43"
-    #assert compute(s, n, a) == "14 23"
+    s = "1234"
+    n = "2"
+    a = "21 43"
+    assert compute(s, n, a) == "14 23"

@@ -40,7 +40,8 @@ def compute_the_answer(x, y, a, m):
     v = a**f_y - 1
     ratio = math.lcm(u, v) / math.gcd(u, v)
     result = ratio % m
-    print(ratio, result)
+    result2 = math.remainder(ratio, m)
+    print(ratio, result, result2)
     return result
 
 
@@ -52,15 +53,13 @@ def main_stdin():
     with fileinput.input() as fh:
         lines = fh.readline().strip()
         n_cases = int(lines[0])
-        test_case_number = 0
 
         while True:
             has_something = fh.readline().strip()
             if len(has_something) > 0:
-                test_case_number += 1
                 n_tournaments = int(has_something)
                 tournaments = [int(x) for x in fh.readline().split()]
-                compute_minimum(test_case_number, tournaments)
+                compute_the_answer(tournaments)
             else:
                 break
 

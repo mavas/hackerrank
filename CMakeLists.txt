@@ -4,3 +4,4 @@ project(hackerrank)
 
 add_executable(find_a_triangle code/find_a_triangle.cc)
 add_executable(game code/game.cc)
+add_executable(the_answer code/the_answer.cc)

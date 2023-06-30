@@ -31,11 +31,16 @@ def fib(n):
 
 
 def compute_the_answer(x, y, a, m):
+    """
+    fib(6) = fib(5) + fib(4) = fib(5) + [fib(3) + fib(2)]
+    """
     f_x = fib(x)
     f_y = fib(y)
     u = a**f_x - 1
     v = a**f_y - 1
-    result = (math.lcm(u, v) / math.gcd(u, v)) % m
+    ratio = math.lcm(u, v) / math.gcd(u, v)
+    result = ratio % m
+    print(ratio, result)
     return result
 
 

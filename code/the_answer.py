@@ -35,8 +35,10 @@ def compute_minimum(test_case_number, test_case):
     return result
 
 
-def main():
-    input_file = os.path.abspath('./test_case_1.txt')
+def main_stdin():
+    """
+    Compute the answer, reading test cases from standard input.
+    """
 
     with fileinput.input() as fh:
         lines = fh.readline().strip()
@@ -55,6 +57,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main_stdin()
+
     #case_1 = [13, 11, 11, 11, 13, 11]
     #assert compute_minimum(1, case_1) == "Case #1: 82"

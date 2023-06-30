@@ -4,21 +4,34 @@ https://codeforces.com/gym/104022/problem/I
 
 cat test_case_1.txt
 
-2
-6
-13 11 11 11 13 11
-6
-13 11 11 11 13 11
+3
+3 3 3 97
+7 3 2 1901
+6 12 3 100
+
+1
+1761
+98
 """
 
 
-import os
 import fileinput
-import sys
 import math
+import os
+import sys
+
+
+def fib(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2:
+    else:
+        return fib(n-1) + fib(n-2)
 
 
 def compute_minimum(test_case_number, test_case):
+    u = a**(fib(x) - 1)
     return result
 
 

@@ -25,14 +25,17 @@ def fib(n):
     if n == 1:
         return 1
     elif n == 2:
-        return 2
+        return 1
     else:
         return fib(n-1) + fib(n-2)
 
 
 def compute_the_answer(x, y, a, m):
-    u = a**(fib(x) - 1)
-    return result
+    f_x = fib(x)
+    f_y = fib(y)
+    u = a**f_x - 1
+    v = a**f_y - 1
+    return (math.lcm(u, v) / math.gcd(u, v)) % m
 
 
 def main_stdin():
@@ -61,3 +64,5 @@ if __name__ == '__main__':
 
     case_1 = [3, 3, 3, 97]
     assert compute_the_answer(3, 3, 3, 97) == 1
+    assert compute_the_answer(7, 3, 2, 1901) == 1761
+    assert compute_the_answer(6, 12, 3, 100) == 98

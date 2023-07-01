@@ -26,6 +26,7 @@ void compute_the_answer(const int x, const int y, const int a, const int m)
     const int u = pow(a, f_x) - 1;
     const int v = pow(a, f_y) - 1;
     const int lcm = std::lcm(u, v);
+    const int gcd = std::gcd(u, v);
 }
 
 

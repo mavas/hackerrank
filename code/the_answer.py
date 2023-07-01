@@ -57,12 +57,10 @@ def compute_the_answer(x, y, a, m):
     fib(6) = fib(5) + fib(4) = fib(5) + [fib(3) + fib(2)]
     """
     f_x = fib(x)
-    print("f_x: %s" % f_x)
     f_y = fib(y)
-    print("f_y: %s" % f_y)
-    u = a**f_x - 1
+    u = (a**f_x) - 1
     print("u = %s**%s - 1 = %s" % (a, f_x, u))
-    v = a**f_y - 1
+    v = (a**f_y) - 1
     print("v = %s**%s - 1 = %s" % (a, f_y, v))
     lcm = math.lcm(u, v)
     print("lcm: %s" % lcm)

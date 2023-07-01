@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 
         int x, y, a, m;
         scanf("%d %d %d %d\n", &x, &y, &a, &m);
-        printf("x = %d, y = %d, a = %d, m = %d\n", x, y, a, m);
+        printf("\tx = %d, y = %d, a = %d, m = %d\n", x, y, a, m);
         compute_the_answer(x, y, a, m);
 
         //std::string line2;

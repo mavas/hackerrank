@@ -21,12 +21,26 @@ int fib(const int n)
 
 void compute_the_answer(const int x, const int y, const int a, const int m)
 {
-    const int f_x = fib(x);
-    const int f_y = fib(y);
-    const int u = pow(a, f_x) - 1;
-    const int v = pow(a, f_y) - 1;
-    const int lcm = std::lcm(u, v);
-    const int gcd = std::gcd(u, v);
+    int f_x;
+    int f_y;
+    int u;
+    int v;
+    int lcm;
+    int gcd;
+    uint answer;
+    uint report;
+
+    f_x = fib(x);
+    f_y = fib(y);
+    u = pow(a, f_x) - 1;
+    v = pow(a, f_y) - 1;
+    lcm = std::lcm(u, v);
+    gcd = std::gcd(u, v);
+    answer = lcm / gcd;
+    report = answer % m;
+
+    printf("\t\tanswer = %d\n", answer);
+    printf("\t\treport = %d\n", report);
 }
 
 

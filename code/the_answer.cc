@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cmath>
+#include <numeric>
 
 
 int fib(const int n)
@@ -24,6 +25,7 @@ void compute_the_answer(const int x, const int y, const int a, const int m)
     const int f_y = fib(y);
     const int u = pow(a, f_x) - 1;
     const int v = pow(a, f_y) - 1;
+    const int lcm = std::lcm(u, v);
 }
 
 

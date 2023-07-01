@@ -17,6 +17,12 @@ int fib(const int n)
 }
 
 
+void compute_the_answer(const int x, const int y, const int a, const int m)
+{
+
+}
+
+
 int main(int argc, char* argv[])
 {
     int N;
@@ -28,10 +34,15 @@ int main(int argc, char* argv[])
     for (int count=0; count < N; count+=1)
     {
         char line[500];
-        std::string line2;
 
-        std::getline(std::cin, line2);
-        std::cout << "\t" << line2 << "\n";
+        int x, y, a, m;
+        scanf("%d %d %d %d\n", &x, &y, &a, &m);
+        printf("x = %d, y = %d, a = %d, m = %d\n", x, y, a, m);
+        compute_the_answer(x, y, a, m);
+
+        //std::string line2;
+        //std::getline(std::cin, line2);
+        //std::cout << "\t" << line2 << "\n";
 
         //scanf("%s\n", &line);
         //printf("\t%s\n", line);

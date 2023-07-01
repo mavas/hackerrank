@@ -61,10 +61,15 @@ def compute_the_answer(x, y, a, m):
     f_y = fib(y)
     print("f_y: %s" % f_y)
     u = a**f_x - 1
-    print("u: %s" % u)
+    print("u = %s**%s - 1 = %s" % (a, f_x, u))
     v = a**f_y - 1
-    print("v: %s" % v)
-    ratio = math.lcm(u, v) / math.gcd(u, v)
+    print("v = %s**%s - 1 = %s" % (a, f_y, v))
+    lcm = math.lcm(u, v)
+    print("lcm: %s" % lcm)
+    gcd = math.gcd(u, v)
+    print("gcd: %s" % gcd)
+    ratio = (lcm / gcd)
+    print("ratio = %s" % ratio)
     result = ratio % m
     result2 = math.remainder(ratio, m)
     print(ratio, result, result2)

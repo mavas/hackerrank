@@ -1,52 +1,29 @@
 """
 https://codeforces.com/gym/102069/problem/D
 
-
-cat test_case_1.txt
-
-2
-6
-13 11 11 11 13 11
-6
-13 11 11 11 13 11
+cat code/dima_and_array_test_1.txt | python code/dima_and_array.py
 """
 
 
 import os
 import fileinput
 import sys
-import math
-
-
-def compute_minimum(test_case_number, test_case):
-    n_competitions = len(test_case)
-    sketchpads_per_competition = [0] * n_competitions
-
-    for index, item in enumerate(test_case):
-        sketchpads_per_competition[index] = item + math.ceil(item * .1)
-
-    minimum_n = sum(sketchpads_per_competition)
-
-    result = "Case #%s: %s" % (test_case_number, minimum_n)
-    print(result)
-    return result
 
 
 def main():
-    input_file = os.path.abspath('./test_case_1.txt')
-
     with fileinput.input() as fh:
-        lines = fh.readline().strip()
-        n_cases = int(lines[0])
-        test_case_number = 0
+        N, Q = fh.readline().strip().split()
+        N = int(N)
+        Q = int(Q)
+        print(N, Q)
+        a = fh.readline().strip().split()
+        a = [int(x) for x in a]
+        print(a)
 
         while True:
-            has_something = fh.readline().strip()
-            if len(has_something) > 0:
-                test_case_number += 1
-                n_tournaments = int(has_something)
-                tournaments = [int(x) for x in fh.readline().split()]
-                compute_minimum(test_case_number, tournaments)
+            instruction = fh.readline().strip()
+            if len(instruction) > 0:
+                print(instruction)
             else:
                 break
 

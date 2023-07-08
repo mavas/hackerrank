@@ -22,9 +22,9 @@ def find_mex(a):
 
 def process_instruction(i, a):
     if i[0] == '?':
-        left = a[i[1]-1]
-        right = a[i[2]-1]
-        new_a = a[i[1]-1:i[2]]
+        left_index = i[1] - 1
+        right_index = i[2]
+        new_a = a[left_index:right_index]
         print(find_mex(new_a))
         return a
     elif i[0] == '!':

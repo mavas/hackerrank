@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22.1)
 
-#set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Debug)
 #find_package(GMP REQUIRED)
 
 project(hackerrank)

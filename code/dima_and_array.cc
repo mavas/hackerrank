@@ -56,37 +56,63 @@ int main(int argc, char* argv[])
             int mex = 2;
             //int new_a[right-left] = a[;
 
-            std::set<int> new_set(a2.begin()+left, a2.begin()+right);
+            //std::set<int> new_set_old(a2.begin()+left-1, a2.begin()+right-1);
+            std::set<int> new_set;
+            for (int array_index = left - 1; array_index <= right - 1; array_index += 1)
+            {
+                new_set.insert(a[array_index]);
+            }
             const int minimum = *new_set.begin();
             const int maximum = *new_set.rbegin();
             printf("\t\tMin/Max: %d %d\n", minimum, maximum);
 
-            std::multiset<int> multi(a+left-1, a+right-1);
-            std::multiset<int>::iterator itlow;
-            itlow = multi.lower_bound(0);
-            printf("\t\tMin: %d\n", *itlow);
+            //std::multiset<int> multi(a+left-1, a+right-1);
+            //std::multiset<int>::iterator itlow;
+            //itlow = multi.lower_bound(0);
+            //printf("\t\tMin: %d\n", *itlow);
 
             if (minimum > 0)
             {
-                //printf("
+                mex = 0;
+                //printf("%d\n", mex);
+            } else {
+                int value = minimum + 1;
+                for (; value <= maximum; value += 1)
+                {
+                    //if (new_set.contains(value))
+                    //if (new_set.find(value) != new_set.end())
+                    if (new_set.count(value) == 0)
+                    {
+                        mex = value;
+                        printf("\t\t\tMEX1: %d\n", mex);
+                        value = -1;
+                        break;
+                    }
+                }
+                if (value == (maximum + 1))
+                {
+                    mex = value;
+                    printf("\t\t\tMEX2: %d\n", mex);
+                }
             }
 
-            //std::set<int> new_a(a, 
-            //std::vector<int>
-            int counter = 0;
-            for (int value = minimum; value < maximum; value += 1)
-            {
-                //if (new_set.count(value) == 0)
-                //{
-                //    printf("%d\n", value);
-                //    //break;
-                //}
-            }
-            for (int lower = left; lower < right; lower += 1)
-            {
-                
-            }
-            //mex = *min_element(a2.begin()+left, a2.end()-right);
+            ////std::set<int> new_a(a, 
+            ////std::vector<int>
+            //int counter = 0;
+            //for (int value = minimum; value < maximum; value += 1)
+            //{
+          
+            //    //if (new_set.count(value) == 0)
+            //    //{
+            //    //    printf("%d\n", value);
+            //    //    //break;
+            //    //}
+            //}
+            //for (int lower = left; lower < right; lower += 1)
+            //{
+            //    
+            //}
+            ////mex = *min_element(a2.begin()+left, a2.end()-right);
  
             printf("%d\n", mex);
         }
@@ -102,9 +128,15 @@ int main(int argc, char* argv[])
             for (size_t i = 0; i < N; i++)
             {
                 if (i == (N - 1))
+                {
                     printf("%d\n", a[i]);
+                    //printf("%d\n", a2.at(i));
+                }
                 else
+                {
                     printf("%d ", a[i]);
+                    //printf("%d ", a2.at(i));
+                }
             }
         }
 

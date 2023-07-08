@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cmath>
 #include <numeric>
+#include <climits>
 
 
 int fib(const int n)

@@ -10,20 +10,44 @@ import fileinput
 import sys
 
 
+def find_mex(a):
+    i = 0
+    for item in a:
+        if i in a:
+            i += 1
+            continue
+        else:
+            return i
+
+
+def process_instruction(i, a):
+    if i[0] == '?':
+        left = a[i[1]-1]
+        right = a[i[2]-1]
+        new_a = a[i[1]-1:i[2]]
+        print(find_mex(new_a))
+        return a
+    elif i[0] == '!':
+        a[i[1]-1] = i[2]
+        return a
+    else:
+        raise Exception
+
+
 def main():
     with fileinput.input() as fh:
         N, Q = fh.readline().strip().split()
         N = int(N)
         Q = int(Q)
-        print(N, Q)
         a = fh.readline().strip().split()
         a = [int(x) for x in a]
-        print(a)
 
         while True:
-            instruction = fh.readline().strip()
+            instruction = fh.readline().strip().split()
             if len(instruction) > 0:
-                print(instruction)
+                instruction[1] = int(instruction[1])
+                instruction[2] = int(instruction[2])
+                a = process_instruction(instruction, a)
             else:
                 break
 

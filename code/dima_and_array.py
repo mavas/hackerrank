@@ -18,6 +18,7 @@ def find_mex(a):
             continue
         else:
             return i
+    return i
 
 
 def process_instruction(i, a):

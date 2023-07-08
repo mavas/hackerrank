@@ -11,22 +11,17 @@ int main(int argc, char* argv[])
     int N, Q;
     scanf("%d %d\n", &N, &Q);
     printf("%d, %d\n", N, Q);
-    return 0;
-    int count = 0;
 
-    int x1, y1, x2, y2;
+    int a[N];
 
-    //while (count < 600)
-    while (count < 1)
+    for (int i = 0; i < (N-1); i++)
     {
-        char c;
-
-        printf("Q %d %d %d %d\n", x1, y1, x2, y2);
-        scanf("%c\n", &c);
-        //printf("\t%c\n", c);
-
-        count += 1;
+        scanf("%d ", &a[i]);
     }
+    scanf("%d\n", &a[N-1]);
+    for (size_t i = 0; i < N; i++)
+        printf("%d ", a[i]);
+    printf("\n");
 
     return 0;
 }

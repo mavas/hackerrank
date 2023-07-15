@@ -6,6 +6,9 @@
  * and 'right', and see if that can help you out somehow in making a more
  * optimal solution.
  *
+ * I hear you're supposed to use something like a segmentation tree
+ * https://github.com/srcmake/segment-tree
+ *
  * int min = *min_element(v1.begin(), v1.end());
  */
 

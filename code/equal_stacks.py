@@ -47,3 +47,4 @@ def equal_stacks(a, b, c):
 
 if __name__ == '__main__':
     assert equal_stacks([1, 2, 1, 1], [1, 1, 2], [1, 1]) == 2
+    assert equal_stacks([3, 2, 1, 1, 1], [4, 3, 2], [1, 1, 4, 1]) == 5

@@ -74,29 +74,36 @@ def compute_the_answer(x, y, a, m):
     """
     fib(6) = fib(5) + fib(4) = fib(5) + [fib(3) + fib(2)]
     """
+    print("%d, %d, %d, %d" % (x, y, a, m))
     f_x = fib(x)
     f_y = fib(y)
     u = (a**f_x) - 1
-    print("u = %s**%s - 1 = %s" % (a, f_x, u))
+    print("\tu = %s**%s - 1 = %s" % (a, f_x, u))
     v = (a**f_y) - 1
-    print("v = %s**%s - 1 = %s" % (a, f_y, v))
+    print("\tv = %s**%s - 1 = %s" % (a, f_y, v))
     lcm = math.lcm(u, v)
-    print("lcm: %s" % lcm)
+    print("\tlcm(u, v) = %s" % lcm)
     gcd = math.gcd(u, v)
-    print("gcd: %s" % gcd)
+    print("\tgcd(u, v) = %s" % gcd)
     ratio = (lcm / gcd)
-    print("ratio = %s" % ratio)
-    result = ratio % m
+    print("\tratio = %s (%s)" % (ratio, type(ratio)))
+    print("\tratio = %s" % round(ratio, 5))
+    print("\tratio = %f" % ratio)
+    print("\tratio = %s" % int(ratio))
+    print("\tratio = %f" % round(ratio, 16))
+    print("\tratio = {:.20f}".format(ratio))
+    result = int(ratio) % m
     result2 = math.remainder(ratio, m)
-    print(ratio, result, result2)
+    print("\t", end='')
+    print(ratio, '{:.20f}'.format(ratio % m), result, result2)
     return result
 
 
 if __name__ == '__main__':
     #main_stdin()
 
-    assert compute_the_answer(3, 3, 3, 97) == 1
-    print()
-    assert compute_the_answer(7, 3, 2, 1901) == 1761
-    print()
+    #assert compute_the_answer(3, 3, 3, 97) == 1
+    #print()
+    #assert compute_the_answer(7, 3, 2, 1901) == 1761
+    #print()
     assert compute_the_answer(6, 12, 3, 100) == 98

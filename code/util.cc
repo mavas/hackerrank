@@ -1,5 +1,12 @@
 // A simple representation of graph using STL,
 // for the purpose of competitive programming
+// https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/
+// https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-using-stl-in-c/
+// https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-set-in-stl/
+// https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/
+// https://www.geeksforgeeks.org/graph-implementation-using-stl-for-competitive-programming-set-2-weighted-graph/
+// https://github.com/stdgraph/graph-v2
+//
 #include<bits/stdc++.h>
 
 
